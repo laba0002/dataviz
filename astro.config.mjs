@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 
 import alpinejs from "@astrojs/alpinejs";
@@ -7,3 +7,13 @@ import alpinejs from "@astrojs/alpinejs";
 export default defineConfig({
   integrations: [tailwind(), alpinejs()],
 });
+
+tailwind.config = {
+  theme: {
+    extend: {
+      backgroundImage: {
+        "hero-img": "url('hero.jpg')",
+      },
+    },
+  },
+};

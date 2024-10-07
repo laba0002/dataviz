@@ -4,12 +4,23 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import graph from "../assets/images/chart.svg";
+import hero from "../assets/images/hero.jpg";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
+	<div class="relative">
+		<div class="bg-center bg-cover bg-no-repeat bg-hero-img bg-fixed flex items-center justify-center h-screen pb-12"></div> 
+		<!-- <Image src={hero} alt="hero" class="w-full h-auto" /> -->
+		<div class="absolute inset-0 flex items-center justify-center z-20">
+		  <h1 class="text-white text-7xl font-bold p-20 text-center ">
+			Slår mændende nogensinde <br> kvinder i livets løb?
+		  </h1>
+		</div>
+	  </div>
+	<article class="grid mx-auto container gap-8 pt-8 prose ">
+		<h3 class="text-2xl"><strong>Vi lever længere end nogensinde før - men nogle mere end andre</strong></h3>
+		<p><span style="font-weight: 400;">Siden 1840 (184 år siden) er mænd og kvinders levetid nærmest fordoblet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eaque exercitationem consequuntur ipsa! Sunt earum eveniet voluptates a quasi iste voluptas maxime itaque quas, nisi ea eius maiores hic ipsum!</span></p>
+		<Image src={graph} alt="graf"/>
+		<p><span style="font-weight: 400;">Siden 1840 (184 år siden) er mænd og kvinders levetid nærmest fordoblet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eaque exercitationem consequuntur ipsa! Sunt earum eveniet voluptates a quasi iste voluptas maxime itaque quas, nisi ea eius maiores hic ipsum!</span></p>
 	</article>
 </MainLayout>
