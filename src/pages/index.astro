@@ -9,11 +9,11 @@ import hero from "../assets/images/hero.jpg";
 ---
 <MainLayout title="Titel">
 	<div class="relative">
-		<div class="bg-center bg-cover bg-no-repeat bg-hero-img bg-fixed flex items-center justify-center h-screen pb-12"></div> 
-		<!-- <Image src={hero} alt="hero" class="w-full h-auto" /> -->
+		<div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div> 
+		<Image src={hero} alt="hero" class="w-full h-auto" />
 		<div class="absolute inset-0 flex items-center justify-center z-20">
-		  <h1 class="text-white text-7xl font-bold p-20 text-center ">
-			Slår mændende nogensinde <br> kvinder i livets løb?
+		  <h1 class="text-white text-7xl font-bold text-center  p-8 ">
+			Slår mændende nogensinde kvinder i livets løb?
 		  </h1>
 		</div>
 	  </div>
